@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Дамеля, пойдём погулять</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <div class="app">
+      <section class="screen screen--s1 is-active" data-screen="s1">
+        <button class="envelope" type="button" id="envelope" aria-label="письмо для Дамели">
+          <span class="envelope__flap" aria-hidden="true"></span>
+          <span class="envelope__seal" aria-hidden="true"></span>
+          <span class="envelope__caption" id="flap-caption">для Дамели</span>
+        </button>
+        <p class="caption touch-hint" id="touch-hint">коснись — откроется</p>
+      </section>
+
+      <section class="screen" data-screen="s2">
+        <article class="paper letter">
+          <p class="display" id="letter-greeting">Дамеля,</p>
+          <h1 class="h1" id="letter-headline">пойдём погулять.</h1>
+          <p class="body" id="letter-body">не план на вечер — просто выйдем.</p>
+          <p class="memory" id="letter-afterthought">я уже думаю, куда.
+а ты напиши — куда тянет.
+
+— Тлеу</p>
+          <div class="letter-reply">
+            <p class="caption caption--ink" id="her-place-hint">а я хочу</p>
+            <label class="sr-only" for="her-place" id="her-place-label">куда хочешь сходить</label>
+            <input id="her-place" type="text" maxlength="48" autocomplete="off" />
+          </div>
+        </article>
+        <div class="dock letter-dock">
+          <button class="cta" type="button" data-go="s4" id="cta-s2" disabled></button>
+          <button class="quiet-link quiet-link--cream" type="button" data-go="s3b" id="link-posters"></button>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="s3a">
+        <div class="back-row">
+          <button class="quiet-link quiet-link--cream" type="button" data-go="s2" id="back-s3a"></button>
+        </div>
+        <p class="caption" id="where-caption"></p>
+        <div class="ribbon" id="place-ribbon" hidden></div>
+        <div class="deck" id="place-deck"></div>
+        <p class="flash" id="keep-two" hidden></p>
+        <p class="memory hint-second" id="and-also" hidden></p>
+        <div class="dock">
+          <button class="cta" type="button" data-go="s4" id="cta-s3a"></button>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="s3b">
+        <div class="back-row">
+          <button class="quiet-link quiet-link--cream" type="button" data-go="s2" id="back-s3b"></button>
+        </div>
+        <p class="caption" id="posters-caption"></p>
+        <div class="poster-list" id="poster-list"></div>
+        <div class="dock">
+          <button class="quiet-link quiet-link--cream" type="button" id="choose-myself"></button>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="s3c">
+        <div class="back-row">
+          <button class="quiet-link quiet-link--cream" type="button" data-go="s3b" id="back-s3c"></button>
+        </div>
+        <p class="caption" id="poster-open-caption"></p>
+        <div class="poster-place-list" id="poster-place-list"></div>
+        <div class="dock">
+          <button class="cta" type="button" data-go="s4" id="cta-s3c" disabled></button>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="s4">
+        <div class="back-row">
+          <button class="quiet-link quiet-link--cream" type="button" data-go="s3a" id="back-s4"></button>
+        </div>
+        <div class="paper when-place-reminder" id="when-place-reminder" hidden></div>
+        <div class="when-list" id="when-list"></div>
+        <div class="day-field" id="day-field" hidden>
+          <label class="sr-only" for="weekend-day" id="day-label">день</label>
+          <input id="weekend-day" type="text" maxlength="24" autocomplete="off" />
+        </div>
+        <div class="dock">
+          <button class="cta" type="button" data-go="s5" id="cta-s4"></button>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="s5">
+        <div class="back-row">
+          <button class="quiet-link quiet-link--cream" type="button" data-go="s4" id="back-s5"></button>
+        </div>
+        <div class="mood-grid" id="mood-grid"></div>
+        <div class="dock">
+          <button class="cta" type="button" data-go="s6" id="cta-s5"></button>
+        </div>
+      </section>
+
+      <section class="screen screen--flush" data-screen="s6">
+        <div class="back-row">
+          <button class="quiet-link quiet-link--cream" type="button" id="back-s6" data-go="s3a"></button>
+        </div>
+        <p class="caption" id="note-caption"></p>
+        <article class="paper note-sheet" id="note-sheet">
+          <p class="note-text" id="note-preview" aria-live="polite"></p>
+        </article>
+        <div class="her-block">
+          <p class="caption" id="her-hint"></p>
+          <label class="sr-only" for="her-line" id="her-label">строчка для него</label>
+          <input class="her-line" id="her-line" type="text" maxlength="80" autocomplete="off" />
+        </div>
+        <p class="without-this" id="without-this"></p>
+        <p class="pocket-error" id="pocket-error" hidden></p>
+        <div class="pocket-dock">
+          <div class="pocket">
+            <button class="cta" type="button" id="cta-pocket"></button>
+          </div>
+          <div class="mail-row" id="mail-row" hidden>
+            <a class="quiet-link quiet-link--cream" id="mail-link"></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen screen--s7" data-screen="s7">
+        <div class="wait-hero" id="wait-hero"></div>
+        <div class="wait-body">
+          <p class="memory" id="wait-memory"></p>
+          <div class="wait-second" id="wait-second" hidden></div>
+          <p class="body wait-copy" id="wait-copy"></p>
+        </div>
+        <div class="dock">
+          <button class="cta" type="button" data-go="s6" id="cta-s7"></button>
+        </div>
+      </section>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

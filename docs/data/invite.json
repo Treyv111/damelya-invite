@@ -1,0 +1,188 @@
+{
+  "nickname": "Дамеля",
+  "whatsappNumber": "77052266896",
+  "mailto": "",
+  "letter": {
+    "flapCaption": "для Дамели",
+    "greeting": "Дамеля,",
+    "headline": "пойдём погулять.",
+    "body": "не план на вечер — просто выйдем.",
+    "afterthought": "я уже думаю, куда.\nа ты напиши — куда тянет.\n\n— Тлеу"
+  },
+  "places": [
+    {
+      "id": "tokkpoki",
+      "name": "Токкпоки",
+      "group": "cafe",
+      "photo": "./images/places/tokkpoki.svg",
+      "memory": "Если хочется корейской кухни."
+    },
+    {
+      "id": "hardys",
+      "name": "Хардис",
+      "group": "cafe",
+      "photo": "./images/places/hardys.svg",
+      "memory": "Если хочется бургеров."
+    },
+    {
+      "id": "sf",
+      "name": "SF",
+      "group": "cafe",
+      "photo": "./images/places/sf.svg",
+      "memory": "Если хочется шаурмы."
+    },
+    {
+      "id": "central-park",
+      "name": "Центральный парк",
+      "group": "park",
+      "photo": "./images/places/central-park.svg",
+      "memory": "Походить среди деревьев"
+    },
+    {
+      "id": "koktal-park",
+      "name": "Коктал парк",
+      "group": "park",
+      "photo": "./images/places/koktal-park.svg",
+      "memory": "То что поближе"
+    },
+    {
+      "id": "kinoroom",
+      "name": "Кинорум",
+      "group": "cinema",
+      "photo": "./images/places/kinoroom.svg",
+      "memory": "Полежать вместе и заказать еду."
+    },
+    {
+      "id": "kinoteatr",
+      "name": "Кинотеатр",
+      "group": "cinema",
+      "photo": "./images/places/kinoteatr.svg",
+      "memory": "Посмотреть новые фильмы."
+    },
+    {
+      "id": "place-other",
+      "name": "Другое",
+      "group": "other",
+      "custom": true,
+      "photo": "./images/places/other.svg",
+      "memory": "напиши, куда тянет"
+    }
+  ],
+  "posters": [
+    {
+      "id": "poster-eat",
+      "title": "Поесть",
+      "line": "если хочется сесть за стол",
+      "placeIds": ["tokkpoki", "hardys", "sf"],
+      "photo": "./images/posters/poster-eat.svg",
+      "tilt": 1.5
+    },
+    {
+      "id": "poster-walk",
+      "title": "Прогулка",
+      "line": "если хочется воздуха",
+      "placeIds": ["central-park", "koktal-park"],
+      "photo": "./images/posters/poster-walk.svg",
+      "tilt": -2
+    },
+    {
+      "id": "poster-cinema",
+      "title": "Кино",
+      "line": "если хочется темноты вдвоём",
+      "placeIds": ["kinoroom", "kinoteatr"],
+      "photo": "./images/posters/poster-cinema.svg",
+      "tilt": -1
+    }
+  ],
+  "whenWindows": [
+    {
+      "id": "now",
+      "label": "Сейчас",
+      "caption": "выходим, пока город ещё наш",
+      "needsDay": false
+    },
+    {
+      "id": "after-sunset",
+      "label": "После заката",
+      "caption": "когда окна зажгутся",
+      "needsDay": false
+    },
+    {
+      "id": "weekend",
+      "label": "Выходные",
+      "caption": "напиши день",
+      "needsDay": true
+    }
+  ],
+  "moods": [
+    {
+      "id": "quiet",
+      "label": "тихо",
+      "texture": "./images/moods/quiet.svg"
+    },
+    {
+      "id": "talk",
+      "label": "болтать",
+      "texture": "./images/moods/talk.svg"
+    },
+    {
+      "id": "cozy",
+      "label": "зябко и обниматься",
+      "texture": "./images/moods/cozy.svg"
+    },
+    {
+      "id": "hungry",
+      "label": "голодные",
+      "texture": "./images/moods/hungry.svg"
+    }
+  ],
+  "copy": {
+    "touchHint": "коснись — откроется",
+    "chooseWhere": "Хочу сюда",
+    "chooseWhereNeed": "сначала напиши куда",
+    "herPlaceHint": "а я хочу",
+    "herPlacePlaceholder": "парк, кино, или просто погулять",
+    "herPlaceLabel": "куда хочешь сходить",
+    "orPosters": "или три афиши",
+    "whereCaption": "куда пойдём",
+    "groupCafe": "кафе",
+    "groupPark": "парки",
+    "groupCinema": "кино",
+    "otherPlaceholder": "напиши куда",
+    "otherCafeLabel": "название кафе",
+    "otherParkLabel": "название парка",
+    "andAlso": "если хочешь — и заглянем ещё сюда",
+    "keepTwo": "оставим эти двое",
+    "placesCta": "Вот так, дальше",
+    "placesCtaNeed": "сначала коснись места",
+    "placesCtaNeedOther": "напиши, куда",
+    "placesEmpty": "тогда просто выйдем",
+    "alsoHere": "ещё сюда",
+    "postersCaption": "куда тянет",
+    "chooseMyself": "хочу сама написать",
+    "posterHereCta": "Сюда",
+    "posterHereNeed": "сначала коснись места",
+    "whenCta": "Так и будет",
+    "moodCta": "записка почти готова",
+    "noteCaption": "это увидит только Тлеу",
+    "herLineHint": "одна строчка Тлеу",
+    "herLinePlaceholder": "только если хочется",
+    "herLineLabel": "строчка для Тлеу",
+    "dayLabel": "день",
+    "dayPlaceholder": "например, суббота",
+    "withoutThis": "без этого я не узнаю, что ты идёшь",
+    "pocketCta": "Положить в карман",
+    "pocketAria": "Положить записку в карман",
+    "orMail": "или тихо на почту",
+    "pocketError": "карман не открылся — попробуй ещё раз или тихо на почту",
+    "waiting": "Жду тебя там.",
+    "waitBody": "если записка дошла — я уже там, в голове.\nесли осталась у тебя — карман ещё открыт.",
+    "backToPocket": "Вернуться к карману",
+    "backToLetter": "к письму",
+    "backToPlaces": "к местам",
+    "backToPosters": "к афишам",
+    "backToOpenPoster": "к афише",
+    "backToWhen": "ко времени",
+    "andMore": "и ещё"
+  }
+}

@@ -1,0 +1,37 @@
+---
+description: Static stack that ships as a GitHub repo and GitHub Pages site — no paid host, no server runtime
+alwaysApply: true
+---
+
+# Stack: только GitHub
+
+Сайт должен открываться из репозитория. Хостинг — **GitHub Pages**. Никакого своего сервера, Vercel, Netlify, Railway, БД или backend API.
+
+## Разрешённый стек
+
+- Статика: HTML + CSS + vanilla JS
+- Либо Vite (vanilla) с билдом в статику
+- Данные — JSON/файлы **внутри репозитория**
+- Картинки и шрифты — в репо (или публичный CDN без ключей)
+
+```text
+✅ index.html, styles.css, app.js, data/*.json
+✅ npm run build → docs/ или dist/ для Pages
+❌ Next.js / SSR / API routes
+❌ Node, Python, PHP, Express как runtime
+❌ Supabase, Firebase, своя БД, секреты в .env
+```
+
+## Репозиторий
+
+- Корень сайта — `docs/` (удобно для Pages) или корень с `index.html`
+- Относительные пути: `./styles.css`, не `/styles.css` с чужого домена
+- Без обязательного localhost: открывается как `username.github.io/repo/`
+- Учитывать base path репозитория (`/меню-свиданий/` или английский slug)
+- `README` с шагами: Pages → Deploy from branch → `/docs`
+
+## Запрещено
+
+- Фичи, которые не работают без бэкенда (логин-сервер, запись в чужую БД)
+- Секреты и API-ключи в коде
+- Абсолютные URL на `localhost`

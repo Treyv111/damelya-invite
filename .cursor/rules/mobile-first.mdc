@@ -1,0 +1,43 @@
+---
+description: Mobile-first layout is mandatory — the site must work well on phones first
+alwaysApply: true
+---
+
+# Mobile-first — обязательно
+
+Сайт в первую очередь для телефона. Десктоп — расширение, не основа. Если на узком экране плохо — задача не сдана.
+
+## Обязательно
+
+- `<meta name="viewport" content="width=device-width, initial-scale=1">`
+- CSS mobile-first: базовые стили для ~360px, `min-width` для планшета/десктопа
+- Без горизонтального скролла и вылезания блоков
+- Кнопки и ссылки: минимум ~44×44px, удобный тап
+- Текст читается без pinch-zoom (body ≥ 16px)
+- Главные действия доступны большим пальцем, не только hover
+
+```html
+<!-- ❌ BAD -->
+<meta name="viewport" content="width=1200">
+
+<!-- ✅ GOOD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+
+```css
+/* ❌ BAD: сначала десктоп, телефон сломан */
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+
+/* ✅ GOOD */
+.grid { display: grid; gap: 12px; }
+@media (min-width: 768px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+```
+
+## Проверка перед сдачей
+
+- Ширина 360–430px: иерархия, кнопки, меню, карточки свиданий
+- Нет `overflow-x` у `body`
+- Формы, модалки и фиксированные кнопки не перекрывают контент и клавиатуру
+- Картинки `max-width: 100%`, без обрезки смысла
